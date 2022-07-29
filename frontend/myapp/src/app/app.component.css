@@ -1,0 +1,51 @@
+.main-container {
+  background: #56a3a6;
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.card.text-center.description-card {
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.card.text-center.weather-card {
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.card.weather-card {
+  width: auto;
+  height: auto;
+}
+
+.form-container {
+  background: #484538;
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  margin: 5px;
+  color: white;
+}
+
+.city-container {
+  background: #cad49d;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+  display: none;
+}
+
+.weather-container {
+  background: #cad49d;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+  display: none;
+}
+
+.time {
+  font-size: 10px;
+}
