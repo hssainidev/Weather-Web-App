@@ -34,4 +34,6 @@ build/
 
 /frontend/myapp/node/
 
-backend/src/main/resources/application.properties
+### local variables ###
+/frontend/myapp/src/environments/
+/backend/src/main/resources/application.properties
