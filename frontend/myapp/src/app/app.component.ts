@@ -75,12 +75,25 @@ export class AppComponent implements OnInit {
     // if (epoch < 10000000000)
     //   epoch *= 1000;
     let hours = Math.floor(epoch / 3600);
-    let minutes = Math.abs((epoch / 60) % 60);
+    let minutes = Math.abs((epoch / 60) % 60).toString();
+    if (minutes == '0'){
+      minutes = '00'
+    }
     let timeZone: string;
     if (hours < 0) {
-      timeZone = "UTC" + hours.toString() + ":" + minutes.toString();
+      if (hours > -10){
+        timeZone = "UTC-0" + hours.toString().charAt(hours.toString().length-1) + ":" + (minutes.toString());
+      }
+      else {
+        timeZone = "UTC" + hours.toString() + ":" + (minutes.toString()  );
+      }
     } else {
-      timeZone = "UTC+" + hours.toString() + ":" + minutes.toString()
+      if (hours < 10){
+        timeZone = "UTC+0" + hours.toString().charAt(hours.toString().length-1) + ":" + (minutes.toString());
+      }
+      else {
+        timeZone = "UTC+" + hours.toString() + ":" + (minutes.toString()  );
+      }
     }
     return timeZone;
   }

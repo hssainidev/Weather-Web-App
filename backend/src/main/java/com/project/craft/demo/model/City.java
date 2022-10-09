@@ -9,20 +9,22 @@ import java.io.Serializable;
 public class City implements Serializable {
     @Id
     @Column(nullable = false, updatable = false)
-    private Long id;
+    private Integer id;
+    @Column(columnDefinition = "varchar(500)")
     private String cityName;
+    @Column(columnDefinition = "varchar(500)")
     private String cityDescription;
 
-    public City(){
+    public City() {
 
     }
 
-    public City(Long id, String cityName) {
+    public City(Integer id, String cityName) {
         this.id = id;
         this.cityName = cityName;
     }
 
-    public City(Long id, String cityName, String cityDescription) {
+    public City(Integer id, String cityName, String cityDescription) {
         this.id = id;
         this.cityName = cityName;
         this.cityDescription = cityDescription;
@@ -32,7 +34,7 @@ public class City implements Serializable {
         return cityName;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -42,9 +44,6 @@ public class City implements Serializable {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", city='" + cityName + '\''+
-                ", description='" + cityDescription +'\'' +'}';
+        return "Employee{" + "id=" + id + ", city='" + cityName + '\'' + ", description='" + cityDescription + '\'' + '}';
     }
 }

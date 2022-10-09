@@ -31,8 +31,7 @@ public class CityResource {
 
     @GetMapping("/{id}")
     public ResponseEntity<City> getCityDescription(@PathVariable("id") Long id) {
-//        City city = cityService.getCityDescriptionById(id);
-        City city = null;
+        City city = cityService.getCityDescriptionById(id);
         return new ResponseEntity<>(city, HttpStatus.OK);
     }
 }

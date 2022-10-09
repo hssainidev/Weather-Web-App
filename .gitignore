@@ -37,3 +37,5 @@ build/
 ### local variables ###
 /frontend/myapp/src/environments/
 /backend/src/main/resources/application.properties
+/.vs/
+/.jpb/
