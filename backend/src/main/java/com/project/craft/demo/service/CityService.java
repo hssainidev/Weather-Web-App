@@ -20,7 +20,7 @@ public class CityService {
         return cityRepo.findAll();
     }
 
-    public City getCityDescriptionById(Long id) {
+    public City getCityDescriptionById(Integer id) {
         return  cityRepo.getCityDescriptionById(id);
     }
 
